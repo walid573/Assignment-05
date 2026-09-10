@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './App.css'
 import type { devStackType } from './type/type';
+import Nav from './components/Nav';
 
 
 const dateFetch = async():Promise<devStackType[]> =>{
@@ -18,7 +19,7 @@ const [promiseData] = useState(()=>dateFetch())
   
   return (
     <>
-      
+      <Nav></Nav>
     </>
   )
 }
