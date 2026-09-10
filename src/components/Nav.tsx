@@ -14,7 +14,7 @@ export default function Nav() {
                     <img src={Logo}  alt="" />
                 </div>
                 <div className="hidden lg:block ">
-                    <ul className=" text-[#475569] decoration-none font-semibold text-[16px] gap-7.25 flex justify-center items-center">
+                    <ul className=" text-[#475569] font-jakarta decoration-none font-semibold text-[16px] gap-7.25 flex justify-center items-center">
                         <li className="text-[#DB2777] "><a href="#" >Home</a></li>
                         <li><a href="#" className="hover:text-[#DB2777]">Technologies</a></li>
                         <li><a href="#" className="hover:text-[#DB2777]">Projects</a></li>
@@ -23,8 +23,8 @@ export default function Nav() {
                     </ul>
                 </div>
                 <div className="flex justify-center items-center gap-4">
-                    <a href="#" className="decoration-none hover:text-[#D91B7E]" >Sign In</a>
-                    <button className="btn btn-md rounded-3xl bg-[#D91B7E] text-white">Sign Up</button>
+                    <a href="#" className="decoration-none font-jakarta hover:text-[#D91B7E]" >Sign In</a>
+                    <button className="btn outline-none font-jakarta border-none btn-md rounded-3xl bg-[#D91B7E] text-white">Sign Up</button>
                 </div>
             </div>
 
