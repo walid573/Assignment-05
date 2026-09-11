@@ -1,6 +1,7 @@
 
-import { useState, type Dispatch, type SetStateAction } from "react";
+import {  type Dispatch, type SetStateAction } from "react";
 import type { devStackType } from "../../type/type"
+import { toast } from "react-toastify";
 
 export interface TechProps {
     tech: devStackType;
@@ -17,12 +18,15 @@ export default function TechnologyCard({ tech, selectedTech, setSelectedTech }: 
 
     const handleAddToStack = () => {
 
-        if (addTOStack) return;
+        if (addTOStack) {
+            
+            return};
 
         setSelectedTech(prev => [
             ...prev,
             tech
         ]);
+        toast.success(`${tech.name} added to your stack!`);
     };
 
     return (
