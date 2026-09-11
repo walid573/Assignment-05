@@ -23,7 +23,7 @@ export default function Banner() {
 
                 </div>
                 
-                <div className="flex items-center justify-center">
+                <div className="flex items-center md:items-start justify-center md:justify-start">
                     <img className="w-200  h-90 md:w-180 md:h-150  " src={banner} alt="" />
                 </div>
             </section>
