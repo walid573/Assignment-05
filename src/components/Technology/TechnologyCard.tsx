@@ -1,28 +1,35 @@
 
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import type { devStackType } from "../../type/type"
 
 export interface TechProps {
     tech: devStackType;
+    selectedTech: devStackType[],
+    setSelectedTech: Dispatch<SetStateAction<devStackType[]>>
 }
 
-export default function TechnologyCard({ tech }: TechProps) {
-    
-    
-    const [addTOStack, setAddToStack] = useState(false)
-    
+export default function TechnologyCard({ tech, selectedTech, setSelectedTech }: TechProps) {
+
+
+    const addTOStack = selectedTech.some(
+    item => item.id === tech.id
+);
+
     const handleAddToStack = () => {
-        if(!addTOStack){
-            setAddToStack(false)
-        }
-        setAddToStack(true)
-    }
+
+        if (addTOStack) return;
+
+        setSelectedTech(prev => [
+            ...prev,
+            tech
+        ]);
+    };
 
     return (
         <>
             <section className=" p-10 outline-[#F1F5F9] outline-1 rounded-xl ">
                 <div className="flex justify-between items-center py-2">
-                    <img className="w-10 h-10"  src={tech.icon} alt="" />
+                    <img className="w-10 h-10" src={tech.icon} alt="" />
                     <div className="badge badge-soft badge-success">{tech.badge}</div>
                 </div>
                 <div className="flex flex-col">
@@ -34,9 +41,9 @@ export default function TechnologyCard({ tech }: TechProps) {
                     <p className="text-[#64748B]">{tech.difficulty}</p>
                     <p className="text-[#334155]">⭐{tech.rating}</p>
                 </div>
-                
-                    <button onClick={handleAddToStack} disabled={addTOStack} className={`btn rounded-xl  w-full  ${addTOStack ? "":"bg-black text-white"}`} >{addTOStack? "Added" : "Add to Stack"}</button>
-                
+
+                <button onClick={handleAddToStack} disabled={addTOStack} className={`btn rounded-xl  w-full  ${addTOStack ? "" : "bg-black text-white"}`} >{addTOStack ? "Added" : "Add to Stack"}</button>
+
             </section>
         </>
     )

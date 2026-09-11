@@ -4,7 +4,8 @@ import './App.css'
 import type { devStackType } from './type/type';
 import Nav from './components/Nav';
 import Banner from './components/Banner';
-import Technology from './components/Technology/Technologies';
+
+import Technologies from './components/Technology/Technologies';
 
 
 const dateFetch = async():Promise<devStackType[]> =>{
@@ -17,14 +18,15 @@ const dateFetch = async():Promise<devStackType[]> =>{
 function App() {
   
 const [promiseData] = useState(()=>dateFetch())
-  
+
+const [selectedTech, setSelectedTech] = useState<devStackType[]>([])
   
   return (
     <>
       <Nav></Nav>
       <Banner></Banner>
       <Suspense fallback={<p>Loading...</p>}>
-        <Technology promiseData={promiseData}></Technology>
+        <Technologies selectedTech={selectedTech} setSelectedTech={setSelectedTech} promiseData={promiseData}></Technologies>
       </Suspense>
     </>
   )
