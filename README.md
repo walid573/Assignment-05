@@ -1,4 +1,4 @@
-**Project Name: Dev Stack – Developer Stack Selector**
+## Project Name: Dev Stack – Developer Stack Selector
 
 Description of the Project: 
 Dev Stack is a new-age React application which enables developers to discover trending web development technologies and create their own developer stacks. Users can view technologies, add them to their stack, delete them and get real-time notifications in form of toast alerts.
