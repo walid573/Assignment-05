@@ -19,13 +19,10 @@ export default function TechnologyCard({ tech, selectedTech, setSelectedTech }: 
     const handleAddToStack = () => {
 
         if (addTOStack) {
-            
+            toast.warning(`${tech.name} is already in your stack!`);
             return};
 
-        setSelectedTech(prev => [
-            ...prev,
-            tech
-        ]);
+        setSelectedTech(prev => [...prev,tech]);
         toast.success(`${tech.name} added to your stack!`);
     };
 
@@ -34,7 +31,7 @@ export default function TechnologyCard({ tech, selectedTech, setSelectedTech }: 
             <section className=" p-10 outline-[#F1F5F9] outline-1 rounded-xl ">
                 <div className="flex justify-between items-center py-2">
                     <img className="w-10 h-10" src={tech.icon} alt="" />
-                    <div className="badge badge-soft badge-success">{tech.badge}</div>
+                    <div className={`badge badge-soft  ${tech.badgeColor}`}>{tech.badge}</div>
                 </div>
                 <div className="flex flex-col">
                     <h2 className="text-[#0F172A] text-[18px] font-jakarta font-bold py-2">{tech.name}</h2>
@@ -46,7 +43,8 @@ export default function TechnologyCard({ tech, selectedTech, setSelectedTech }: 
                     <p className="text-[#334155]">⭐{tech.rating}</p>
                 </div>
 
-                <button onClick={handleAddToStack} disabled={addTOStack} className={`btn rounded-xl  w-full  ${addTOStack ? "" : "bg-black text-white"}`} >{addTOStack ? "Added" : "Add to Stack"}</button>
+                <button onClick={handleAddToStack}  className={`btn rounded-xl  w-full  ${addTOStack ? "btn-success text-white"
+            : "bg-black text-white hover:bg-gray-800"}`} >{addTOStack ? "✓ Added to Stack" : "Add to Stack"}</button>
 
             </section>
         </>

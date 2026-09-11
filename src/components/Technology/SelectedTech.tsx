@@ -4,12 +4,11 @@ import { RxCross1 } from "react-icons/rx"
 import { toast } from "react-toastify"
 
 export interface SelectedTechProps {
-    tech: devStackType;
     selectedTech: devStackType[],
     setSelectedTech: Dispatch<SetStateAction<devStackType[]>>
 }
 
-export default function SelectedTech({ tech, selectedTech, setSelectedTech }: SelectedTechProps) {
+export default function SelectedTech({  selectedTech, setSelectedTech }: SelectedTechProps) {
     if (selectedTech.length === 0) {
         return (
             <>
@@ -37,11 +36,11 @@ export default function SelectedTech({ tech, selectedTech, setSelectedTech }: Se
 
 
                         <h2 className="text-[18px] font-jakarta font-bold ">Your Stack</h2>
-                        <p className="text-[#94A3B8] text-[12px] ">{selectedTech.length} Technology Selected</p>
+                        <p className="text-[#94A3B8] text-[12px] py-1">{selectedTech.length} Technology Selected</p>
                         <div className="">
 
                             {selectedTech.map((tech) => (
-                                <div key={tech.id} className="flex py-3 px-2  my-2 items-center justify-between rounded-xl outline-[#E2E8F0] outline-1">
+                                <div key={tech.id} className="flex py-3 px-2  my-2 items-center justify-between rounded-lg outline-[#E2E8F0] outline-1">
                                     <div className="flex items-center gap-1">
                                         <img src={tech.icon} className="w-8 h-8" alt="" />
                                         <div className="flex flex-col ">

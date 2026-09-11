@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Banner from './components/Banner';
 
 import Technologies from './components/Technology/Technologies';
+import Footer from './components/Footer';
 
 
 const dateFetch = async():Promise<devStackType[]> =>{
@@ -28,6 +29,7 @@ const [selectedTech, setSelectedTech] = useState<devStackType[]>([])
       <Suspense fallback={<p>Loading...</p>}>
         <Technologies selectedTech={selectedTech} setSelectedTech={setSelectedTech} promiseData={promiseData}></Technologies>
       </Suspense>
+      <Footer></Footer>
     </>
   )
 }

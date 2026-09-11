@@ -17,7 +17,7 @@ export default function Technologies({ promiseData,selectedTech,setSelectedTech 
 
     return (
         <>
-            <section className="container mx-auto">
+            <section className="container mx-auto pb-20">
                 <h2 className="text-[36px] font-extrabold font-inter">Explore the <span className="bg-linear-to-r from-[#EC4899] via-[#BC52C7] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span></h2>
                 <p className="text-[#64748B] text-[16px]  pb-8 font-jakarta">Pick one technology per category to build your ideal stack.</p>
                 <div className="grid grid-cols-4 ">
@@ -30,7 +30,7 @@ export default function Technologies({ promiseData,selectedTech,setSelectedTech 
 
                     {/* Div of 25% */}
                     <div className="flex  justify-center ">
-                        <SelectedTech selectedTech={selectedTech} setSelectedTech={setSelectedTech}></SelectedTech>
+                        <SelectedTech  selectedTech={selectedTech} setSelectedTech={setSelectedTech}></SelectedTech>
                     </div>
                 </div>
             </section>

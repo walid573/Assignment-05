@@ -7,4 +7,5 @@ export interface devStackType {
     rating: number,
     difficulty: string,
     badge: string
+    badgeColor:string
 }
