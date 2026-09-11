@@ -9,7 +9,7 @@ import Technologies from './components/Technology/Technologies';
 import Footer from './components/Footer';
 
 
-const dateFetch = async():Promise<devStackType[]> =>{
+const dataFetch = async():Promise<devStackType[]> =>{
     const res = await fetch("/data.json");
     const data = await res.json();
     return data
@@ -18,7 +18,7 @@ const dateFetch = async():Promise<devStackType[]> =>{
 
 function App() {
   
-const [promiseData] = useState(()=>dateFetch())
+const [promiseData] = useState(()=>dataFetch())
 
 const [selectedTech, setSelectedTech] = useState<devStackType[]>([])
   

@@ -12,7 +12,7 @@ export interface TechnologyProps {
 
 export default function Technologies({ promiseData,selectedTech,setSelectedTech }: TechnologyProps) {
     const technology = use(promiseData)
-    console.log(technology.length);
+    
 
 
     return (

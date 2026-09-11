@@ -46,7 +46,7 @@ export default function TechnologyCard({ tech, selectedTech, setSelectedTech }: 
                     <p className="text-[#334155]">⭐{tech.rating}</p>
                 </div>
 
-                <button onClick={handleAddToStack}  className={`btn rounded-xl  w-full  ${addTOStack ? "btn-success text-white"
+                <button onClick={handleAddToStack}   className={`btn rounded-xl  w-full  ${addTOStack ? "btn-success text-white opacity-70 cursor-not-allowed"
             : "bg-black text-white hover:bg-gray-800"}`} >{addTOStack ? "✓ Added to Stack" : "Add to Stack"}</button>
 
             </section>

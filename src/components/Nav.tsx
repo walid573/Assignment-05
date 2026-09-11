@@ -7,7 +7,7 @@ import Logo from "../assets/logo-text.png"
 export default function Nav() {
     
     return (
-        <><div className="bg-white sticky top-0">
+        <><div className="bg-white sticky top-0 z-50">
             <div className="container    mx-auto flex md:grid justify-between  md:grid-cols-3 py-4 px-3 md:py-5 items-center">
                 <RxHamburgerMenu className="block md:hidden text-2xl" />
                 <div className="h-8  w-[136.2px]">
