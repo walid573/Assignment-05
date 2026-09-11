@@ -22,7 +22,7 @@ export default function Nav() {
                         <li><a href="#" className="hover:text-[#DB2777]">Contact</a></li>
                     </ul>
                 </div>
-                <div className="flex justify-center items-center gap-4">
+                <div className="flex justify-center items-center gap-4 ">
                     <a href="#" className="decoration-none font-jakarta hover:text-[#D91B7E]" >Sign In</a>
                     <button className="btn outline-none font-jakarta border-none btn-md rounded-3xl bg-[#D91B7E] text-white">Sign Up</button>
                 </div>
