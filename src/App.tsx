@@ -24,7 +24,7 @@ const [selectedTech, setSelectedTech] = useState<devStackType[]>([])
   
   return (
     <>
-      <Nav></Nav>
+      <Nav ></Nav>
       <Banner></Banner>
       <Suspense fallback={<p>Loading...</p>}>
         <Technologies selectedTech={selectedTech} setSelectedTech={setSelectedTech} promiseData={promiseData}></Technologies>

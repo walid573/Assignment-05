@@ -31,7 +31,7 @@ export default function SelectedTech({  selectedTech, setSelectedTech }: Selecte
     else {
         return (
             <>
-                <section className="w-70 ">
+                <section className="md:w-70 ">
                     <div className="rounded-xl outline-[#E2E8F0] outline-1 px-5 pt-7">
 
 

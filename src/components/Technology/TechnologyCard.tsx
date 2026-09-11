@@ -30,11 +30,14 @@ export default function TechnologyCard({ tech, selectedTech, setSelectedTech }: 
         <>
             <section className=" p-10 outline-[#F1F5F9] outline-1 rounded-xl ">
                 <div className="flex justify-between items-center py-2">
-                    <img className="w-10 h-10" src={tech.icon} alt="" />
+                    <div className="flex gap-2">
+                        <img className="w-10 h-10" src={tech.icon} alt="" />
+                    <h2 className="text-[#0F172A] block md:hidden text-[18px] font-jakarta font-bold py-2">{tech.name}</h2>
+                    </div>
                     <div className={`badge badge-soft  ${tech.badgeColor}`}>{tech.badge}</div>
                 </div>
                 <div className="flex flex-col">
-                    <h2 className="text-[#0F172A] text-[18px] font-jakarta font-bold py-2">{tech.name}</h2>
+                    <h2 className="text-[#0F172A] hidden md:block text-[18px] font-jakarta font-bold py-2">{tech.name}</h2>
                     <p className="text-[#64748B] text-[12px]  max-h-[20%] ">{tech.description}</p>
                 </div>
                 <div className="flex justify-between py-4">

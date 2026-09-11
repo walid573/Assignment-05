@@ -7,8 +7,8 @@ import Logo from "../assets/logo-text.png"
 export default function Nav() {
     
     return (
-        <>
-            <div className="container mx-auto flex md:grid justify-between  md:grid-cols-3 py-4 px-3 md:py-6 items-center">
+        <><div className="bg-white sticky top-0">
+            <div className="container    mx-auto flex md:grid justify-between  md:grid-cols-3 py-4 px-3 md:py-5 items-center">
                 <RxHamburgerMenu className="block md:hidden text-2xl" />
                 <div className="h-8  w-[136.2px]">
                     <img src={Logo}  alt="" />
@@ -27,7 +27,7 @@ export default function Nav() {
                     <button className="btn outline-none font-jakarta border-none btn-md rounded-3xl bg-[#D91B7E] text-white">Sign Up</button>
                 </div>
             </div>
-
+</div>
         </>
     )
 }
