@@ -17,7 +17,7 @@ export default function SelectedTech({  selectedTech, setSelectedTech }: Selecte
 
 
                         <h2 className="text-[18px] font-jakarta font-bold ">Your Stack</h2>
-                        <p className="text-[#94A3B8] text-[12px] ">{selectedTech.length} Technology Selected</p>
+                        <p className="text-[#94A3B8] text-[12px] ">No technologies selected yet.</p>
                         <div className="flex text-center items-center justify-center mt-4 rounded-2xl px-5 py-6 border-[#E2E8F0] border border-dotted">
                             <h2 className="text-[#94A3B8]">Your stack is empty.</h2>
 

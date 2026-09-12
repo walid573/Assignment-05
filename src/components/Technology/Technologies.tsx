@@ -30,7 +30,7 @@ export default function Technologies({ promiseData,selectedTech,setSelectedTech 
 
                     {/* Div of 25% */}
                     <div className="flex justify-center md:justify-center  items-center md:items-start ">
-                        <div className="flex text-center justify-center md:col-span-1 ">
+                        <div className="flex text-center md:text-start justify-center md:col-span-1 ">
                         <SelectedTech  selectedTech={selectedTech} setSelectedTech={setSelectedTech}></SelectedTech>
                     </div>
                     </div>
