@@ -67,8 +67,4 @@ Dev Stack is a new-age React application which enables developers to discover tr
 
 ## 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
-<<<<<<< HEAD
 **Answer:** The parent passes the data to the child using props, while the child returns some data back using a callback function passed from the parent, like `setSelectedTech()`.
-=======
-**Answer:** The parent passes the data to the child using props, while the child returns some data back using a callback function passed from the parent, like `setSelectedTech()`.
->>>>>>> feb5056f818010c8fa0b281a31ddcc4b318e626d
